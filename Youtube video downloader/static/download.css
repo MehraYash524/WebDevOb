@@ -1,0 +1,172 @@
+/* download.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('y.png'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep background image fixed */
+
+}
+
+.blur-rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding-top: 150px; /* Increase top padding to increase height */
+    padding-bottom: 150px; /* Increase bottom padding to increase height */
+    padding-left: 50px; /* Adjust left padding as needed */
+    padding-right: 50px; /* Adjust right padding as needed */
+    border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    max-width: 50%; /* Limit max width */
+    transition: transform 0.3s; /* Add transition for zoom effect */
+    min-height: 400px; /* Set a minimum height */
+    min-width: 600px; /* Set a minimum width */
+    
+}
+
+.blur-rectangle h1 {
+    text-align: center;
+    position: relative; /* Set the button's position to relative */
+    top: -100px; /* Adjust the top position to move the h2 element up */
+   
+    text-decoration: underline;
+    color: #fff; /* Set text color to white */
+    font-weight: normal; /* Change font weight to bold */
+    font-size: 30px; /* Change font size to 32 pixels */
+    letter-spacing: 3px; /* Add letter spacing */
+
+}
+
+
+
+
+
+.blur-rectangle p {
+    text-align: justify;
+    position: relative; /* Set the button's position to relative */
+    top: 165px; /* Adjust the top position to move the h2 element up */
+    
+    color: #fff; /* Set text color to white */
+    
+    margin-bottom: 0; /* Remove any bottom margin */
+
+    
+}
+
+.blur-rectangle form {
+    text-align: center; /* Center align the form */
+}
+
+.blur-rectangle input[type="submit"],
+.blur-rectangle button {
+
+    position: relative; /* Set the button's position to relative */
+    top: 180px; /* Adjust the top position to move the h2 element up */
+    padding: 10px 60px; /* Add padding to buttons */
+    margin-top: 20px; /* Add top margin */
+    background-color: #1B4973; /* Set button color */
+    color: #12E1B9; /* Set button text color */
+    font-size: 13px;
+    font-weight: bold;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border radius */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+
+.blur-rectangle input[type="submit"]:hover,
+.blur-rectangle button:hover {
+    background-color: #12E1B9; /* Change button color on hover */
+    color: #1B4973; /* Change button text color on hover */
+}
+.thumbnail-container {
+    border: 1px solid black; /* Optional: Add border for visualization */
+    position: absolute; /* Set the container position to relative */
+    top: 210px; /* Adjust the top position as needed */
+    left: 520px;
+    right: 10%; /* Adjust the left position as needed */
+    width: 1280px; /* Set maximum width for YouTube thumbnail */
+    height: 720px;
+    overflow: hidden; /* Hide content that exceeds the container's dimensions */
+    transform: translate(-50%, -50%) scale(0.3);
+
+}
+.thumbnail-container img {
+    
+    width: 100%; /* Ensure the image does not exceed the container's width */
+    height: auto; 
+}
+
+@media only screen and (max-width: 600px) {
+
+    .blur-rectangle {
+        /* Your smartphone styles here */
+        padding-top: 170px; /* Adjust padding for smaller screens */
+        padding-bottom: 170px; /* Adjust padding for smaller screens */
+        padding-left: 80px; /* Adjust padding for smaller screens */
+        padding-right: 80px; /* Adjust padding for smaller screens */
+        min-height: auto; /* Reset minimum height */
+        min-width: auto; /* Reset minimum width */
+    }
+   
+  
+    .blur-rectangle p {
+        text-align: justify;
+        font-size: 13px; /* Decrease font size for smaller screens */
+        line-height: 1.5; /* Adjust line height as needed */
+        position: relative; /* Set the button's position to relative */
+        top: 100px; /* Adjust the top position to move the h2 element up */
+    }
+
+    .blur-rectangle h1 {
+        font-size: 20px; /* Decrease font size for smaller screens */
+        line-height: 1; /* Adjust line height as needed */
+        margin-bottom: 0; /* Remove any bottom margin */
+        letter-spacing: 2px;
+    }
+
+    
+
+    .blur-rectangle input[type="submit"],
+    .blur-rectangle button {    
+        position: relative; /* Set the button's position to relative */
+        top: 120px; /* Adjust the top position to move the h2 element up */
+        padding: 10px 90px; /* Add padding to buttons */
+        margin-top: 20px; /* Add top margin */
+        background-color: #1B4973; /* Set button color */
+        color: #12E1B9; /* Set button text color */
+        font-size: 13px;
+        font-weight: bold;
+        border: none; /* Remove border */
+        border-radius: 10px; /* Apply border radius */
+        cursor: pointer; /* Change cursor to pointer */
+        transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+    }
+
+    
+
+    .thumbnail-container {
+        border: 1px solid black; /* Optional: Add border for visualization */
+        position: absolute; /* Set the container position to relative */
+        top: 35%; /* Adjust the top position as needed */
+        left: 250px;
+        transform: translate(-50%, -50%) scale(0.2);
+        width: 1280px; /* Set maximum width for YouTube thumbnail */
+        height: 720px;
+        overflow: hidden;
+    
+    }
+
+    
+
+    
+}

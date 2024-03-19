@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='download.css') }}">
+
+</head>
+<body>
+
+   
+    <div class="blur-rectangle">
+
+        <h1>Download Info</h1>
+        <p>Title: {{ video.title }}</p>
+        <p>Author: {{ video.author }}</p>
+        <p>Duration: {{ video.length }} seconds</p>
+        <!-- Add more information as needed -->   
+        <form id="download-form" action="/download" method="post">
+            <input type="hidden" name="url" value="{{ video.watch_url }}">
+            <button id="download-button" type="button">Download</button>
+        </form>
+        <form action="/" method="get">
+            <button type="submit">Download Another Video</button>
+        </form>
+
+    </div>
+    <div class="thumbnail-container">
+        <img src="{{ video.thumbnail_url }}" alt="Thumbnail">
+    </div>
+
+    <script>
+        document.getElementById("download-button").addEventListener("click", function() {
+            var url = document.querySelector("input[name='url']").value; // Get the video URL
+            document.getElementById("download-form").submit();
+            alert("Download is started the video will be downloaded shortly. Mean while you can download another video by clicking the \"Download Another Video\" button."); // Display popup message
+            }
+        );
+    </script>
+    
+</body>
+</html>

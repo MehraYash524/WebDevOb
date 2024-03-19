@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YashTube</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="blur-rectangle">
+        <h1>YOUTUBE</h1>
+        <h2>A HIGH RESOLUTION VIDEO DOWNLOADER</h2>
+        <form id="urlForm" action="/" method="post"><br>
+            <input type="text" id="url" name="url" placeholder="Enter YouTube Video URL..."><br><br>
+            <input type="submit" value="GO">
+        </form>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://mehrayash524.wixstudio.io/my-portfolio" target="_blank"><img src="static/webp.png" alt="Social Media Icon 1"></a>
+        <a href="https://github.com/MehraYash524" target="_blank"><img src="static/git.png" alt="Social Media Icon 2"></a>
+        <a href="https://www.linkedin.com/in/yash-mehra-a22483243/" target="_blank"><img src="static/linkedin.png" alt="Social Media Icon 3"></a>
+        
+    </div>
+    
+    <script>
+        document.getElementById("urlForm").addEventListener("submit", function(event) {
+            var urlValue = document.getElementById("url").value; // Get the value of the URL input field
+    
+            if (urlValue.trim() === "") { // Check if the URL input field is empty or contains only whitespace
+                alert("Please enter a valid URL."); // Display an alert if the URL input field is empty
+                event.preventDefault(); // Prevent the default form submission
+                return;
+            }
+    
+            // Regular expression to validate URL format
+            var urlRegex = /^(https?:\/\/)?([\w\d-]+\.)+[\w\d]{2,}(\/.*)?$/;
+    
+            // Check if the URL matches the regular expression
+            if (!urlRegex.test(urlValue)) {
+                alert("Please enter a valid URL."); // Display an alert if the URL format is invalid
+                event.preventDefault(); // Prevent the default form submission
+                return;
+            }
+        });
+    </script>
+    
+</body>
+</html>
