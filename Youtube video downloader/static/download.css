@@ -112,7 +112,7 @@ body {
         /* Your smartphone styles here */
         padding-top: 170px; /* Adjust padding for smaller screens */
         padding-bottom: 170px; /* Adjust padding for smaller screens */
-        padding-left: 80px; /* Adjust padding for smaller screens */
+        padding-left: 95px; /* Adjust padding for smaller screens */
         padding-right: 80px; /* Adjust padding for smaller screens */
         min-height: auto; /* Reset minimum height */
         min-width: auto; /* Reset minimum width */
@@ -158,7 +158,7 @@ body {
         border: 1px solid black; /* Optional: Add border for visualization */
         position: absolute; /* Set the container position to relative */
         top: 35%; /* Adjust the top position as needed */
-        left: 250px;
+        left: 220px;
         transform: translate(-50%, -50%) scale(0.2);
         width: 1280px; /* Set maximum width for YouTube thumbnail */
         height: 720px;
