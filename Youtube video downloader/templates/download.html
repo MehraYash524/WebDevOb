@@ -19,8 +19,9 @@
         <!-- Add more information as needed -->   
         <form id="download-form" action="/download" method="post">
             <input type="hidden" name="url" value="{{ video.watch_url }}">
-            <button id="download-button" type="button">Download</button>
+            <a href="{{ download_link }}" download target="_blank"><button id="download-button" type="button">Download</button></a>
         </form>
+
         <form action="/" method="get">
             <button type="submit">Download Another Video</button>
         </form>
@@ -32,9 +33,8 @@
 
     <script>
         document.getElementById("download-button").addEventListener("click", function() {
-            var url = document.querySelector("input[name='url']").value; // Get the video URL
             document.getElementById("download-form").submit();
-            alert("Download is started the video will be downloaded shortly. Mean while you can download another video by clicking the \"Download Another Video\" button."); // Display popup message
+            alert("Video downloaded successfully. Mean while you can download another video by clicking the \"Download Another Video\" button."); // Display popup message
             }
         );
     </script>
